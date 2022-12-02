@@ -1,9 +1,9 @@
-mod read;
+# Image to ASCII Converter
+Converts most common image types to ASCII. Images can also be downscaled if necessary.
 
-use read::read::Reader;
-
-
-fn main() {
+# Usage
+<code>
+    
     // Read the images into the Variables
     let mut cat = Reader::read("./testing/cat.jpg");
     let mut heatmap = Reader::read("./testing/heatmap.jpg");
@@ -24,5 +24,11 @@ fn main() {
     // Write them as ascii
     cat.write_as_ascii("./ascii_img/cat.txt", true);
     heatmap.write_as_ascii("./ascii_img/heatmap.txt", true);
-    phonescreen.write_as_ascii("./ascii_img/phonescreen.txt", true);
-}
+    phonescreen.write_as_ascii("./ascii_img/phonescreen.txt", true);    
+</code>
+
+# Starting
+run "cargo build" and "cargo run" in the project directory
+
+# Issues
+This project is my first "bigger" project in rust, so it probably has lots of bugs and performance issues. If you find any, feel free to just clone the repo and implement the changes yourself.
